@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*slogan style*/
+
+/* first_section(slogan)*/
+.cover_firstSection {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: radial-gradient(#333, #000);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* image-slogan*/
+.slogan_2019 {
+  width: auto;
+  height: 90%;
+}
+
+/* leaves-containr*/
+.set {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.set div {
+  position: absolute;
+  display: block;
+}
+
+/* for LEAVES animation*/
+.set div:nth-child(1) {
+  left: 20%;
+  animation: animate 15s linear infinite;
+  animation-delay: -7s;
+}
+
+.set div:nth-child(2) {
+  left: 50%;
+  animation: animate 20s linear infinite;
+  animation-delay: -5s;
+}
+
+.set div:nth-child(3) {
+  left: 70%;
+  animation: animate 20s linear infinite;
+  animation-delay: 0s;
+}
+
+.set div:nth-child(4) {
+  left: 0%;
+  animation: animate 15s linear infinite;
+  animation-delay: -5s;
+}
+
+.set div:nth-child(5) {
+  left: 85%;
+  animation: animate 18s linear infinite;
+  animation-delay: -10s;
+}
+
+.set div:nth-child(6) {
+  left: 0%;
+  animation: animate 12s linear infinite;
+}
+
+.set div:nth-child(7) {
+  left: 15%;
+  animation: animate 14s linear infinite;
+}
+
+.set div:nth-child(8) {
+  left: 60%;
+  animation: animate 15s linear infinite;
+
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    transform: translateX(-20px) rotate(45deg);
+
+  }
+
+  40% {
+    transform: translateX(-20px) rotate(90deg);
+
+  }
+
+  60% {
+    transform: translateX(20px) rotate(180deg);
+
+  }
+
+  80% {
+    transform: translateX(-20px) rotate(180deg);
+
+  }
+
+  100% {
+    top: 110%;
+    transform: translateX(-20px) rotate(225deg);
+
+  }
+}
+
+.set2 {
+  transform: scale(2) rotateY(180deg);
+  filter: blur(2px);
+}
+
+/* ███████████████████████████ memories ███████████████████████████*/
+
+.img10 {
+  width: 100%;
+  height: auto;
+  border: solid;
+  border-color: white;
+  margin: 10px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+@media screen and (min-width: 991px) {
+  .img10:hover {
+    transform: scale(1.6);
+    z-index: 100;
+    transition: transform 0.7s ease;
+    position: relative;
+  }
+}
+
+/* ███████████████████████████ events ███████████████████████████*/
+
+.head {
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #fdd401;
+}
+
+.eventName {
+  text-align: left;
+  font-size: 4rem;
+  padding-left: 10px;
+  border-left: 2px solid #fdd401;
+  margin: 30px 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+/*end events*/
+
+/*██████████████████████ start highbord SECTION ██████████████████████*/
+
+.book-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.center-div {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.center-div p {
+  font-size: 13px;
+  text-align: justify;
+}
+
+.center-div h1 {
+  position: absolute;
+  top: 20px;
+  left: 25%;
+
+}
+
+.book-content {
+  width: 65%;
+  min-width: 250px;
+  max-width: 880px;
+  height: 600px;
+  position: relative;
+  perspective: 1000px;
+  transition: 1s;
+  margin-left: 20%;
+
+}
+
+.book {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  transition: 1s;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  cursor: pointer;
+  padding: 0;
+  margin-left:25%;
+
+}
+
+.face-front,
+.face-back {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url('images/legacy/season19/paper.png') no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+
+}
+
+.face-front {
+  box-shadow: inset 3px 0px 20px -7px black;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.face-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(-1px) rotateY(180deg);
+  box-shadow: inset -3px 1px 20px -7px black;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#portada {
+  background: url('images/legacy/season19/cover1.png');
+
+}
+
+#portada-back {
+  background: url('images/legacy/season19/coverBack.png');
+}
+
+#portada,
+#portada-back {
+  background-size: 100% 100%;
+  box-shadow: -28px 19px 13px 0px rgba(0, 0, 0, 0.72);
+  -webkit-box-shadow: -28px 19px 13px 0px rgba(0, 0, 0, 0.72);
+  -moz-box-shadow: -28px 19px 13px 0px rgba(0, 0, 0, 0.72);
+}
+
+
+
+.trnsf {
+  transform: translateX(80px);
+}
+
+.trnsf-reset {
+  transform: translateX(0px);
+}
+
+div .img-e {
+  width: 90%;
+  margin-left: 5%;
+  height: 80%;
+  margin-bottom: 5px;
+  background-color: black;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.center-div h5 {
+  text-align: center;
+}
+
+.center-div h6 {
+  position: absolute;
+  left: 47.5%;
+}
+
+.hbTxt {
+  font-family: 'Dancing Script', cursive;
+  padding: 20px;
+  font-size: 1.5rem !important;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.img-e-1 {
+  background-image: url("images/legacy/season19/hb/1.png");
+  height: 100% !important;
+}
+
+.img-e-2 {
+  background-image: url("images/legacy/season19/hb/2.jpeg");
+}
+
+.img-e-3 {
+  background-image: url("../images/legacy/season19/hb/3.jpg");
+}
+
+.img-e-4 {
+  background-image: url("images/legacy/season19/hb/4.jpg");
+}
+
+.img-e-5 {
+  background-image: url("../images/legacy/season19/hb/5.jpeg");
+}
+
+.img-e-6 {
+  background-image: url("images/legacy/season19/hb/6.jpeg");
+}
+
+.img-e-7 {
+  background-image: url("images/legacy/season19/hb/7.jpg");
+}
+
+.img-e-8 {
+  background-image: url("images/legacy/season19/hb/8.jpeg");
+}
+
+.img-e-9 {
+  background-image: url("images/legacy/season19/hb/9.jpeg");
+}
+
+
+/*███████████████████████████ queries ███████████████████████████*/
+@media screen and (max-width: 991px) {
+  .head {
+    font-size: 2.5rem;
+  }
+
+  .cover_firstSection {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .eventName {
+    font-size: 2.5rem;
+  }
+
+  .book-content {
+    height: 300px;
+    margin-left: 0;
+  }
+  .book{
+   margin-left: 15%;
+  }
+
+  .hbTxt {
+    font-size: 0.8rem !important;
+    padding: 0px;
+  }
+}
